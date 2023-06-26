@@ -1,15 +1,15 @@
 # AWS Cloud Resume
 
-I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)!
+I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)! I did not really have much opportunity to play around with AWS related services in my time at Indeed. I found out about the AWS Cloud Resume Challenge through a Telegram group and saw this as a good opportunity for me to learn some of AWS services and dive into the details on how these services work. I have completed up till step 11 as of 26 June 2023, and it was a great way to learn more in AWS so far, since before this, I did not really have a good idea on what app can I build to play around with AWS services. The aim of this challenge is to simply make use of AWS services to host a resume website
 
 ## Tracker and notes
 
 1. Certification
 2. HTML - Done
 
-- Not my resume, just a random paragraph generated using ChatGPT
+- Not my resume, just a random paragraph generated using ChatGPT as I don't want to risk my [current portfolio site](https://www.chunyang-portfolio.lol/) facing some issues from this challenge.
 
-3. CSS - Done
+1. CSS - Done
 
 - Anyhow done, not the point of this project
 
@@ -35,9 +35,22 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 - I found [this resource from Cloudfare](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/) super useful as well
 
 7. Javascript - Done
+
+- To write some Javascript code to show the render an element in the `index.html` to show the number of visitors to my portfolio currently. Nothing new to a frontend geek like me, but I only did this part after completing steps 8-10 as we need to create an api to update and get the number of views to the site.
+- A small issue I faced and learnt was that after uploading an updated file to `s3` manually (as I have not done CI/CD yet, in part 14), it might be necessary to invalidate the file in Cloudfront as well, as Cloudfront caches static content for 24 hours.
+
 8. Database - Done
-9. API - Done
+
+- Setting up Dynamodb to store the number of views to the current site. I dive too much into dynamodb low level details, but it seems very similar to MongoDB in terms of both being a NoSQL database, both can be fully managed service and highly scalable. I also read up more on when to choose one over another in [this blog](https://rockset.com/blog/mongodb-vs-dynamodb-head-to-head-which-should-you-choose/)
+
+9.  API - Done
 10. Python - Done
+
+- Part 9 and 10 are sort of things that should be done together, so I will write down my process and learnings here together.
+- Created a lambda serverless function that runs on the cloud, which seems like a pretty useful thing to me. I wrote a lambda function to update the `view` value in the `dynamodb` table by 1, and return the updated view value as a JSON response. This function will then be called by a javascript script (in step 7) to render the document to show the number of visitors to the website.
+- Additionally, the use of API gateway was necessary in order to create an api to call the lambda function.
+- I also found out about the existence of CloudWatch to read up error logs of the lambda function when required, to debug a stupid mistake I made of using an undeclared variable initially.
+
 11. Tests
 12. Infrastructure as Code
 13. Source Control
