@@ -52,7 +52,10 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 - I also found out about the existence of CloudWatch to read up error logs of the lambda function when required, to debug a stupid mistake I made of using an undeclared variable initially.
 
 11. Tests
-12. Infrastructure as Code
+
+- Will revisit this later
+
+12. Infrastructure as Code - Currently here learning how to make use of terraform
 13. Source Control
 14. CI/CD (Back end)
 15. CI/CD (Front end)
