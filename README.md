@@ -32,11 +32,12 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
   - The DNS resolver queries the authoritative name servers for the domain to retrieve the IP address associated with the domain name. These authoritative name servers are responsible for storing and providing the DNS records specific to the domain.
   - DNS Resolver will then receive IP address, which is returned to the web browser to establish a connection to the server hosting the website. In our case, the DNS resolver will receive the CloudFront domain name, and the browser initiates a request ot the CloudFront distribution.
   - CloudFront (which is a CDN as well), will then route the request to the nearest edge location. If it is cached, it will directly return the content. Else, CloudFront will retrieve the content from the S3 bucket associated with the CloudFront distribution.
+- I found [this resource from Cloudfare](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/) super useful as well
 
-7. Javascript
-8. Database
-9. API
-10. Python
+7. Javascript - Done
+8. Database - Done
+9. API - Done
+10. Python - Done
 11. Tests
 12. Infrastructure as Code
 13. Source Control
