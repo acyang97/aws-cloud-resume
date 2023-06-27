@@ -56,7 +56,7 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 - Will revisit this later
 
 12. Infrastructure as Code - Currently here learning how to make use of terraform
-13. Source Control
+13. Source Control - Done
 14. CI/CD (Back end)
 15. CI/CD (Front end)
 16. Blog post
