@@ -24,7 +24,7 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 6. DNS - Done
 
 - Utilized Route 53, a DNS web service that helps to route requests to appropriate resources, in other words for this case, to my resume website.
-- The website is now available at [https://www.aws-cloud-resume-challenge-lalala.online/](https://www.aws-cloud-resume-challenge-lalala.online/)
+- Created a website (for now unavailable as i dont want to be charged for aws services)
 - My understanding on how things work altogether from step 2-6:
   - By configuring DNS in Route 53, Route 53 becomes the main DNS for my domain and it manages the DNS records that map my domain name to the IP addresses.
   - Now, when user looks up my website, the browser will perform a DNS look up to find the IP address associated with the domain name entered.
@@ -34,7 +34,7 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
   - CloudFront (which is a CDN as well), will then route the request to the nearest edge location. If it is cached, it will directly return the content. Else, CloudFront will retrieve the content from the S3 bucket associated with the CloudFront distribution.
 - I found [this resource from Cloudfare](https://www.cloudflare.com/en-gb/learning/dns/what-is-dns/) super useful as well
 
-7. Javascript - Done
+1. Javascript - Done
 
 - To write some Javascript code to show the render an element in the `index.html` to show the number of visitors to my portfolio currently. Nothing new to a frontend geek like me, but I only did this part after completing steps 8-10 as we need to create an api to update and get the number of views to the site.
 - A small issue I faced and learnt was that after uploading an updated file to `s3` manually (as I have not done CI/CD yet, in part 14), it might be necessary to invalidate the file in Cloudfront as well, as Cloudfront caches static content for 24 hours.
@@ -56,7 +56,15 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 - Will revisit this later
 
 12. Infrastructure as Code - Currently here learning how to make use of terraform
+
+- For now, only wrote the code to setup s3 and lambda. Have been pretty busy interview prepping these days, might not touch it for a while
+
 13. Source Control - Done
 14. CI/CD (Back end)
-15. CI/CD (Front end)
+15. CI/CD (Front end) - Done
+
+- Move all the static files to another folder called `static`, and made use of github actions to deploy the changes to the s3 bucket so that files are all updated on push.
+- This step included adding of necessary AWS secret keys into github secrets
+- Faced small issues initially due to not adding `Put` permissions for the s3 bucket
+
 16. Blog post
