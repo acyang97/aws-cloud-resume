@@ -57,7 +57,7 @@ I am working on [this](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 
 12. Infrastructure as Code - Currently here learning how to make use of terraform
 
-- For now, only wrote the code to setup s3 and lambda. Have been pretty busy interview prepping these days, might not touch it for a while
+- For now, only wrote the code to setup s3 and lambda. Have been pretty busy interview prepping these days, might not touch it for a while, but I think I've learnt what I wanted to know regarding usage of terraform as IAC to manage AWS resources.
 
 13. Source Control - Done
 14. CI/CD (Back end)
